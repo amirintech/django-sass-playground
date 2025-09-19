@@ -52,9 +52,6 @@ ARG DJANGO_DEBUG=0
 ENV DJANGO_DEBUG=${DJANGO_DEBUG}
 
 
-COPY ./rav.yaml /tmp/rav.yaml
-RUN rav download staticfiles_prod -f /tmp/rav.yaml
-
 # database isn't available during build
 # run any other commands that do not need the database
 # such as:
